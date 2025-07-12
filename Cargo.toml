@@ -1,0 +1,18 @@
+[package]
+name="simplePaymentGateway"
+version="0.1.0"
+edition="2021"
+authors=["arcain arcainearchitect@gmail.com"]
+description="Low-level payment gateway in RUST using only std and low level crates."
+license="MIT"
+repository="https://github.com/arcainearchitect/simplePaymentGateway"
+
+[dependencies]
+
+
+[profile.release]
+opt-level="z"   # prioritize binary size optimization
+lto=true        # link-time optimization
+
+[profile.dev]
+opt-level=1
